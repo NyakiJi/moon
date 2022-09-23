@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 100px;
+            height: 100px;
+            display: none;
+            /* display: inline; */
+        }
+
+        img.selected {
+            display:inline;
+        }
+    </style>
+    <script src="./jquery.mini.js"></script>
+</head>
+<body>
+    <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon1.gif" alt="" class="selected">
+    <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon2.gif" alt="">
+    <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon3.gif" alt="">
+    <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon4.gif" alt="">
+    <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon5.gif" alt="">
+    <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon6.gif" alt="">
+    <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon7.gif" alt="">
+    <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon8.gif" alt="">
+    <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon11.gif" alt="">
+    <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon12.gif" alt="">
+    <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon13.gif" alt="">
+    <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon14.gif" alt="">
+    <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon21.gif" alt="">
+    <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon22.gif" alt="">
+    <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon23.gif" alt="">
+    <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon24.gif" alt="">
+    <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon1.gif" alt="">
+    <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon2.gif" alt="">
+    <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon3.gif" alt="">
+    <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon4.gif" alt="">
+    <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon5.gif" alt="">
+    <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon6.gif" alt="">
+    <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon7.gif" alt="">
+    <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon8.gif" alt="">
+    <script>
+        var img = document.getElementsByTagName('img');
+        
+            // for(let i =0;i< img.length; i++){
+
+            //     (function(i) {
+            //         setTimeout(() => {
+            //             $(this).siblings('img').removeClass('selected');
+            //             $(this).addClass('selected');
+            //         }, 500);
+            //     }(i));
+            //     }
+            for (let i = 0; i < img.length; i++) {
+                setTimeout(function() {
+                    $('.selected').siblings('img').removeClass('selected');
+                    img[i].classList.add('selected');
+                }, i * 500)
+            }
+
+        
+        
+        
+    </script>
+</body>
+</html>
