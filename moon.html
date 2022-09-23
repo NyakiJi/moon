@@ -20,7 +20,7 @@
     <script src="./jquery.mini.js"></script>
 </head>
 <body>
-    <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon1.gif" alt="" class="selected">
+    <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon1.gif" alt="" id="start" class="selected">
     <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon2.gif" alt="">
     <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon3.gif" alt="">
     <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon4.gif" alt="">
@@ -43,25 +43,29 @@
     <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon5.gif" alt="">
     <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon6.gif" alt="">
     <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon7.gif" alt="">
-    <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon8.gif" alt="">
+    <img src="../掷骰子/课件/上机_ _vbscript-图片1/Moon8.gif"  id="end" alt="">
     <script>
         var img = document.getElementsByTagName('img');
-        
-            // for(let i =0;i< img.length; i++){
+        var i = 0;
+        var start = setInterval(()=>{
+            if(img[i].id=="end"){
+                i = 0;
 
-            //     (function(i) {
-            //         setTimeout(() => {
-            //             $(this).siblings('img').removeClass('selected');
-            //             $(this).addClass('selected');
-            //         }, 500);
-            //     }(i));
-            //     }
-            for (let i = 0; i < img.length; i++) {
-                setTimeout(function() {
-                    $('.selected').siblings('img').removeClass('selected');
-                    img[i].classList.add('selected');
-                }, i * 500)
+                //到底之后清除全部的类,重新开始
+                $('img').removeClass('selected')
             }
+            img[i].classList.remove('selected');
+            img[i].nextElementSibling.classList.add('selected');
+
+            //清掉兄弟元素上的类
+            
+            //增加给下一个元素selected类
+            
+            i++;
+        },500);
+                    
+        
+    
 
         
         
